@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://ajk.gov.pk/wp-content/uploads/2022/10/AzadKashmirSeal.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FDBMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+      :root {
+        --color-primary: #4A5B8A; /* Slate Blue */
+        --color-primary-hover: #5E72AE;
+        --color-primary-light: rgba(74, 91, 138, 0.1);
+        --color-danger: #D9534F;
+        --color-danger-hover: #C9302C;
+        --color-accent: #5BC0DE; /* Light Blue/Cyan */
+        --color-text-main: #3D4A6C;
+        --color-text-light: #6B7A99;
+        --color-bg-main: #E9EBF8;
+        --color-bg-card: #FFFFFF;
+        --color-border: #DDE1F0;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--color-bg-main);
+        color: var(--color-text-main);
+      }
+      .card {
+        background-color: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: 0.75rem; /* rounded-xl */
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+        color: var(--color-text-main);
+      }
+      
+      /* Global Form Styles */
+      input, select, textarea {
+        background-color: #F7F8FC !important;
+        border: 1px solid var(--color-border) !important;
+        color: var(--color-text-main) !important;
+        border-radius: 0.5rem !important;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      input:focus, select:focus, textarea:focus {
+          border-color: var(--color-primary) !important;
+          box-shadow: 0 0 0 2px var(--color-primary-light) !important;
+          outline: none;
+      }
+      input::placeholder, textarea::placeholder {
+          color: var(--color-text-light) !important;
+          opacity: 0.7;
+      }
+      input:disabled, select:disabled, textarea:disabled {
+        background-color: #e9ecef !important;
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7A99' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E") !important;
+        background-position: right 0.5rem center !important;
+        background-repeat: no-repeat !important;
+        background-size: 1.5em 1.5em !important;
+        padding-right: 2.5rem !important;
+      }
+
+       /* Custom scrollbar for better aesthetics */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--color-bg-main);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c1c9e0; 
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #aab4d3;
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { translateY(0px); }
+      }
+      .animate-float {
+        animation: float 4s ease-in-out infinite;
+      }
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px) scale(0.98); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "uuid": "https://esm.sh/uuid@9.0.1",
+    "papaparse": "https://esm.sh/papaparse@5.4.1",
+    "xlsx": "https://esm.sh/xlsx@0.18.5",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

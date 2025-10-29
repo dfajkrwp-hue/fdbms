@@ -1,0 +1,5 @@
+{
+  "name": "FDBMS",
+  "description": "A Food Department Billing Management System (FDBMS) to dynamically generate transportation bills based on contracts. It features automated calculations for items, totals, and deductions.",
+  "requestFramePermissions": []
+}
